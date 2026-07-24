@@ -1,14 +1,6 @@
 # Statement Of Work
 
-A Statement of Work (SOW) is a narrative description of the required work. It
-stipulates the deliverables or services required to fulfill the contract, and it
-defines the task to be accomplished or services to be delivered in clear,
-concise and meaningful terms. Examples are by ChatGPT.
-
-Contents:
-
-- [Introduction](#introduction)
-- [Statement of work template](#statement-of-work-template)
+- [Statement](#statement)
   - [Title](#title)
   - [Abstract](#abstract)
   - [Value](#value)
@@ -33,21 +25,30 @@ Contents:
   - [Sign-off](#sign-off)
 
 
-## Statement of work template
+## Statement
 
 
 ### Title
 
-Retail Inventory System
+### Retail Inventory System
 
 ### Abstract
 
-pending
+This statement of work outlines the objectives, scope, deliverables, and timelines for the development and implementation of a new inventory system for Cornerline Home Goods. The project aims to replace and fix the messy mannual manual update, posible human error and product shortage at the end of the week.
 
 
 ### Value
 
-pending
+The exact value is still pending to negotiation
+
+The estimated value of the work in this statement of Work for the inventory system includes and cover from the design, customization,deployment and maintenance to user training and post-implementation of the software.Payments will be made in installments upon the completion of key milestones, ensuring alignment with project progress and deliverables. Any potential changes or additional requirements will be assessed and billed separately, subject to agreement by both parties.
+
+Additionally, the budget accounts for hardware and software licensing fees, professional services for system configuration, and ongoing maintenance for the first year.
+
+
+> [!NOTE]
+> Notice that the 23th of JULY 2026 **Cornerline Home Goods** promess to us **SOFTWARE SOLUTIONS SAS** that the data migration will be made by their staff so the human labor cost of migrating the data will be cover by them.
+
 
 ### Scope
 
@@ -64,7 +65,7 @@ The scope for this system is going to have the next items:
 
 ### Payment
 
-pending
+**pending**
 
 ## Purpose
 
@@ -77,28 +78,38 @@ We’re also looking forward to implementing an administrative dashboard for low
 
 ### Performance
 
+**Business performance aspects:**: 
+1) Porcentage of data migration from the messy manual system to the inventory system.
+2) Net Revenue Impact: The system will contribute to a % incrise in sells and a % reduction in the inventory inaccuracies.
 
-pendind
+**System performance metrics**:
+1) Uptime: The CRM system must maintain at least 99.9% uptime during operation to ensure business continuity
+2) Data Accuracy: the data of the stocks and any data/number should be reflected and correct in the system
+3) User Adoption: 100% of the staff that used the manual system will migrate
+4) Response Time: The system data update from the items should take less than 2 seconds to be reflected on the system. (be 1 second or less for update from withing the system such as newproducts/restocks and 2 seconds or less by any aditional third party connections)
 
 ## Who does what
 
 
 ### People
 
-Administratives and staff.
+1) Store staff
+2) Store manager
+3) Owner
 
 
 ### Roles
 
-Staff: manage items in store
-Administratives: Check general inventory 
+Store staff: manage items in assigned store
+Store manager: Check general inventory and aditional data from the staff
+Owner: the same permissions than store staff and store manager but with the feature of a more complete dashboard with more info from not just the store staff but of the store manager
 
 
 ### Responsibilities
 
 Pendind
 
-## Context
+## Context (Juan Andrés YOung Hoyoss)
 
 
 ### Present
