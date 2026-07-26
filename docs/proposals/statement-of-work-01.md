@@ -9,7 +9,7 @@
 - [Purpose](#purpose)
   - [Objectives](#objectives)
   - [Performance](#performance)
-- [Who does what](#who-does-what)
+- [Who Does What](#who-does-what)
   - [People](#people)
   - [Roles](#roles)
   - [Responsibilities](#responsibilities)
@@ -18,150 +18,265 @@
   - [Future](#future)
 - [Planning](#planning)
   - [Requirements](#requirements)
-- [Other terms and conditions](#other-terms-and-conditions)
-  - [Client's obligations](#clients-obligations)
+- [Other Terms and Conditions](#other-terms-and-conditions)
+  - [Client's Obligations](#clients-obligations)
 - [Schedule](#schedule)
-  - [Expected start date and completion date](#expected-start-date-and-completion-date)
+  - [Expected Start Date and Completion Date](#expected-start-date-and-completion-date)
   - [Sign-off](#sign-off)
 
+---
 
-## Statement
+# Statement
 
+## Title
 
-### Title
+# Retail Inventory Management System
 
-### Retail Inventory System
+---
 
-### Abstract
+## Abstract
 
-This statement of work outlines the objectives, scope, deliverables, and timelines for the development and implementation of a new inventory system for Cornerline Home Goods. The project aims to replace and fix the messy mannual manual update, posible human error and product shortage at the end of the week.
+This Statement of Work (SOW) outlines the objectives, scope, deliverables, and timelines for the development and implementation of a new Retail Inventory Management System for **Cornerline Home Goods**.
 
+The project aims to replace the company's manual inventory process, reducing human error, improving inventory accuracy, preventing stock shortages, and providing real-time inventory visibility. **Software Solutions SAS** will be responsible for designing, developing, deploying, documenting, and supporting the system, while Cornerline Home Goods will perform the data migration using its own staff.
 
-### Value
+---
 
-The exact value is still pending to negotiation
+## Value
 
-The estimated value of the work in this statement of Work for the inventory system includes and cover from the design, customization,deployment and maintenance to user training and post-implementation of the software.Payments will be made in installments upon the completion of key milestones, ensuring alignment with project progress and deliverables. Any potential changes or additional requirements will be assessed and billed separately, subject to agreement by both parties.
+The total project value is currently **pending negotiation**.
 
-Additionally, the budget accounts for hardware and software licensing fees, professional services for system configuration, and ongoing maintenance for the first year.
+The estimated value of this project covers the design, development, customization, deployment, maintenance, user training, and post-implementation support for the inventory management system. Payments will be made according to project milestones to ensure alignment with the successful completion of each phase.
 
+The budget also includes software configuration, system documentation, testing, technical support, and maintenance during the first year after deployment.
 
 > [!NOTE]
-> Notice that the 23th of JULY 2026 **Cornerline Home Goods** promess to us **SOFTWARE SOLUTIONS SAS** that the data migration will be made by their staff so the human labor cost of migrating the data will be cover by them.
+> On **July 23, 2026**, **Cornerline Home Goods** agreed that the data migration process will be performed by its own staff. Therefore, the labor cost associated with data migration is excluded from this proposal and will be covered by the client.
 
+---
 
-### Scope
+## Scope
 
-The scope for this system is going to have the next items: 
+The project includes the design, development, deployment, documentation, and support of a Retail Inventory Management System.
 
-- Item catalog management
-- Real-time inventory quantity tracking
-- Stock-in and stock-out transaction management. 
-- Stock adjustment history. Low-stock alerts within the application. 
-- Dashboard displaying inventory status. 
-- Low-stock reporting. User authentication with role-based access (Store Staff, Store Manager, and Owner). 
-- User guide and system documentation.
+The scope includes:
 
+- Item catalog management.
+- Real-time inventory quantity tracking.
+- Stock-in and stock-out transaction management.
+- Inventory adjustment history.
+- Low-stock alerts.
+- Inventory dashboard.
+- Low-stock reporting.
+- User authentication with role-based access (Store Staff, Store Manager, and Owner).
+- User guide and technical documentation.
+- User training.
+- One year of post-deployment maintenance.
 
-### Payment
+---
 
-**pending**
+## Payment
 
-## Purpose
+The total project cost is currently pending negotiation.
 
+Unless otherwise agreed, payments will be divided into the following milestones:
 
-### Objectives
+- 20% upon contract signing.
+- 30% upon completion and approval of the system design.
+- 30% upon successful completion of development and testing.
+- 20% upon deployment, user training, and final project acceptance.
 
-The main purpose is to create an application that allows the company to keep track of item records, stock movements, current quantities, and reorder alerts. 
-We’re also looking forward to implementing an administrative dashboard for low inventory visibility.
+Payments shall be made via bank transfer within fifteen (15) calendar days after invoice submission.
 
+Any work requested outside the agreed project scope will require written approval from both parties and will be billed separately.
 
-### Performance
+---
 
-**Business performance aspects:**: 
-1) Porcentage of data migration from the messy manual system to the inventory system.
-2) Net Revenue Impact: The system will contribute to a % incrise in sells and a % reduction in the inventory inaccuracies.
+# Purpose
 
-**System performance metrics**:
-1) Uptime: The CRM system must maintain at least 99.9% uptime during operation to ensure business continuity
-2) Data Accuracy: the data of the stocks and any data/number should be reflected and correct in the system
-3) User Adoption: 100% of the staff that used the manual system will migrate
-4) Response Time: The system data update from the items should take less than 2 seconds to be reflected on the system. (be 1 second or less for update from withing the system such as newproducts/restocks and 2 seconds or less by any aditional third party connections)
+## Objectives
 
-## Who does what
+The primary objective of this project is to design, develop, and implement a Retail Inventory Management System that enables Cornerline Home Goods to efficiently manage inventory records, stock movements, current inventory levels, and reorder alerts.
 
+Upon completion, the project will deliver:
 
-### People
+- A centralized inventory management system.
+- Accurate real-time inventory tracking.
+- Automated low-stock alerts.
+- Inventory movement history.
+- Role-based access control.
+- Administrative dashboards for inventory visibility.
+- User documentation and training.
+- Post-deployment technical support.
 
-1) Store staff
-2) Store manager
-3) Owner
+The new system will improve operational efficiency, reduce inventory inaccuracies, and support better business decision-making.
 
+---
 
-### Roles
+## Performance
 
-Store staff: manage items in assigned store
-Store manager: Check general inventory and aditional data from the staff
-Owner: the same permissions than store staff and store manager but with the feature of a more complete dashboard with more info from not just the store staff but of the store manager
+### Business Performance Metrics
 
+1. **Data Migration Rate:** At least 98% of inventory records shall be successfully migrated to the new system.
 
-### Responsibilities
+2. **Inventory Accuracy:** Inventory discrepancies should be reduced by at least 90% compared to the current manual process.
 
-Pendind
+3. **Net Revenue Impact:** The system should contribute to increased sales by reducing stock shortages and improving inventory availability.
 
-## Context (Juan Andrés YOung Hoyoss)
+### System Performance Metrics
 
+1. **System Availability (Uptime):**
+   - Minimum 99.9% uptime during business operations.
 
-### Present
+2. **Data Accuracy:**
+   - Inventory quantities and stock movements must always reflect the correct values.
 
-- Inventory inaccuracies lead to lost sales and rushed purchasing decisions.
-- Management cannot clearly see fast-moving items or low-stock conditions.
+3. **User Adoption:**
+   - 100% of employees currently using the manual inventory process should transition to the new system.
 
-### Future
+4. **Response Time:**
+   - Inventory updates performed within the application should be reflected in one (1) second or less.
 
-- A system for item records, stock movements, current quantities, and reorder alerts.
-- A straightforward dashboard for low inventory visibility.
+---
 
+# Who Does What
 
-## Planning
+## People
 
+The project involves the following stakeholders:
 
-### Requirements
+- Store Staff
+- Store Manager
+- Owner
+- Software Solutions SAS (Development Team)
 
-Pending
+---
 
+## Roles
 
-## Other terms and conditions
+### Store Staff
 
+- Register stock entries and exits.
+- Update product information.
+- Perform inventory adjustments within assigned permissions.
 
-### Client's obligations
+### Store Manager
 
-We are specting the clients to share the information/data about the items from the store and some of the staff will be helping us to fill all of the information into the system. 
+- Supervise inventory operations.
+- Review reports and inventory movements.
+- Manage store inventory.
+- Monitor employee activities.
 
+### Owner
 
-## Schedule
+- Full system access.
+- View business dashboards.
+- Monitor inventory performance.
+- Manage users and system settings.
 
+### Software Solutions SAS
 
-### Expected start date and completion date
+- System analysis.
+- System design.
+- Software development.
+- Testing.
+- Deployment.
+- User training.
+- Technical support.
+- Maintenance.
 
-pending
+---
 
+## Responsibilities
 
-### Sign-off
+| Task | Store Staff | Store Manager | Owner | Software Solutions SAS |
+|------|-------------|---------------|--------|------------------------|
+| Define business requirements | C | R | A | R |
+| Provide inventory data | R | A | C | I |
+| Data migration | R | A | I | C |
+| System analysis | I | C | C | R/A |
+| Software development | I | I | C | R/A |
+| Testing | R | A | C | R |
+| Deployment | I | C | C | R/A |
+| User training | R | R | C | A |
+| Final approval | I | C | A | C |
 
-Pending
+**Legend**
 
+- **R** = Responsible
+- **A** = Accountable
+- **C** = Consulted
+- **I** = Informed
 
-Printed Name:
+---
+
+# Context
+
+## Present
+
+Cornerline Home Goods currently manages inventory through manual processes, resulting in inaccurate inventory records, delayed stock updates, human errors, and limited visibility of inventory levels.
+
+These issues frequently lead to stock shortages, unnecessary purchases, and inefficient inventory management.
+
+---
+
+## Future
+
+The new inventory management system will centralize inventory operations and provide real-time visibility into stock levels, inventory movements, and reorder alerts.
+
+The solution will improve operational efficiency, reduce inventory discrepancies, and provide management with dashboards that support better business decisions.
+
+The system should also support future enhancements such as barcode scanning, supplier management, purchase orders, and integration with accounting software if required.
+
+---
+
+# Planning
+
+## Requirements
+
+**Pending**
+
+---
+
+# Other Terms and Conditions
+
+## Client's Obligations
+
+The client agrees to:
+
+- Provide complete and accurate inventory information before development begins.
+- Assign a project representative as the primary point of contact.
+- Ensure the availability of staff for meetings, testing, training, and project validation.
+- Perform the data migration process using their own personnel.
+- Provide timely feedback and approval of project deliverables.
+- Provide access to existing documentation, business procedures, and operational information required for development.
+- Ensure the required hardware, internet connection, and local infrastructure are available before deployment.
+- Submit any requested changes to the project scope through a formal change request.
+
+---
+
+# Schedule
+
+## Expected Start Date and Completion Date
+
+**Pending**
+
+---
+
+## Sign-off
+
+**NOTE:** Before signing this Statement of Work, if either party has any questions or concerns, they should discuss them before execution of this agreement.
+
+By signing below, both parties acknowledge that they understand and accept the scope, responsibilities, terms, and conditions described in this Statement of Work.
+
+### Printed Name
 
 __________________________________________
 
-
-Signature:
+### Signature
 
 __________________________________________
 
-
-Date:
+### Date
 
 __________________________________________
