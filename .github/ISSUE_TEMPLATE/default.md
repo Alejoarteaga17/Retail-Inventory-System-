@@ -3,131 +3,141 @@ name: Feature Request
 about: Propose a new feature or enhancement
 title: "[FEATURE] "
 labels: enhancement
-assignees: ""
 ---
 
-<!--
-Issues are public. Do not include confidential or sensitive information.
--->
+> [!IMPORTANT]
+> Issues are public. Do **not** include confidential or sensitive information.
+
+---
 
 ## Problem to solve
 
-<!--
-Describe the problem this feature is intended to solve.
-Why is this needed?
-Who is affected?
--->
+> Describe the problem this feature addresses.
+>
+> - Why is this needed?
+> - What pain point does it solve?
+> - What is the origin of the problem?
+
+---
 
 ## Solution
 
-<!--
-Provide a concise summary of the proposed solution (2–4 sentences).
-Explain the approach from the user's perspective before diving into technical details.
--->
+> Provide a concise summary (2–4 sentences) of the proposed solution before describing the implementation details.
+
+---
 
 ## User Stories
 
-<!--
-List all relevant user stories.
+> List all relevant user stories.
 
-Example:
-1. As a <role>, I want <capability>, so that <benefit>.
--->
+1. As a **...**, I want **...**, so that **...**
 
-1.
+---
 
 ## Acceptance Criteria
 
-<!--
-Provide a checklist of verifiable conditions that define when this feature is complete.
--->
+> List all verifiable conditions that must be satisfied before this issue can be considered complete.
 
 - [ ]
 
+---
+
 ## Intended Users
 
-<!--
-Who will use this feature?
-How will they benefit from it?
--->
+> Who will use this feature?
+>
+> How will it benefit them?
+
+---
+
+## Permissions & Security
+
+> Describe any permission, authentication, authorization, or security considerations.
+
+---
 
 ## Proposal
 
-<!--
-Describe the proposed implementation.
+> Describe the implementation in detail.
 
-Include, when applicable:
+Include, where applicable:
 
 - Architecture changes
 - Module structure
 - API contracts
 - Database/schema changes
-- UI/UX considerations
+- UI/UX changes
 - Edge cases
 - Rollout strategy
--->
+
+---
 
 ## Test Plan
 
-<!--
-Describe how the feature should be tested.
+> Describe how the feature will be validated.
 
 Include:
 
-- Business test cases
+- Business scenarios
 - Edge cases
-- Modules/components to test
-- Existing tests that can serve as reference
--->
+- Modules affected
+- Existing tests to reference
 
-## Implementation Steps
+---
 
-1.
-2.
-3.
+## Implementation Checklist
+
+- [ ] Review authorization changes.
+- [ ] Add unit tests.
+- [ ] Add integration / functional / E2E tests.
+- [ ] Review or implement audit logs (tracks).
+- [ ] Update documentation.
+- [ ] Analyze data migration/backward compatibility.
+- [ ] Review whether new credentials or secrets are required.
+- [ ] Verify the code contributions checklist has been followed.
+
+---
 
 ## Success Metrics
 
-<!--
-How will success be measured?
+> How will success be measured?
 
 Examples:
 
 - Adoption
 - Performance improvements
-- Reduced errors
-- Customer impact
--->
+- Error reduction
+- User satisfaction
+
+---
 
 ## ETC Model
 
-<!--
-MANDATORY
+> **Required**
+>
+> Explain how the ETC model will be applied.
+>
+> If it does not apply, explain why.
 
-https://dev.fluidattacks.com/components/common/commit-msg/#eta
-
-Explain how the ETC model will be applied.
-If it does not apply, explain why.
--->
+---
 
 ## Out of Scope
 
-<!--
-Explicitly list what will NOT be implemented as part of this issue.
--->
+> Explicitly list what is **not** included in this feature.
 
 - 
 
+---
+
 ## Further Notes
 
-<!--
-Additional context, design decisions, assumptions, or implementation notes.
--->
+> Additional design decisions, assumptions, implementation notes, or context.
+
+---
 
 ## Links / References
 
-<!--
-Relevant documentation, RFCs, designs, issues, pull requests, or external references.
--->
-
--
+- Documentation:
+- Design:
+- Related Issues:
+- Pull Requests:
