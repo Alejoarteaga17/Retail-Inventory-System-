@@ -234,7 +234,115 @@ The system should also support future enhancements such as barcode scanning, sup
 
 ## Requirements
 
-**Pending**
+### Functional Requirements
+
+#### Inventory Item Management
+
+- The system shall allow users to create, update, view, and deactivate inventory items.
+- The system shall maintain an item catalog containing, at minimum, an item identifier, name, current quantity, and reorder threshold.
+- The system shall display the current inventory quantity for each item.
+- The system shall validate all required input fields before processing inventory item requests.
+
+#### Stock Movement Management
+
+- The system shall allow users to record stock-in transactions.
+- The system shall allow users to record stock-out transactions.
+- The system shall allow authorized users to perform manual inventory adjustments.
+- The system shall automatically update inventory quantities after every stock movement.
+- The system shall prevent inventory quantities from becoming negative.
+- The system shall prevent inventory movements for non-existent inventory items.
+
+#### Inventory Movement History
+
+- The system shall maintain a complete history of all inventory movements.
+- The system shall record the movement type, quantity, timestamp, affected inventory item, and user responsible for each inventory movement.
+- The system shall allow users to view the inventory movement history for individual inventory items.
+
+#### Low Stock Alerts
+
+- The system shall automatically detect when an inventory item's quantity reaches or falls below its configured reorder threshold.
+- The system shall notify users of low-stock inventory items.
+- The system shall display low-stock alerts within the application.
+
+#### Inventory Dashboard and Reporting
+
+- The system shall provide an inventory dashboard displaying current inventory information.
+- The system shall provide a dashboard highlighting inventory items with low stock.
+- The system shall generate low-stock reports.
+
+#### Authentication and Authorization
+
+- The system shall require user authentication before allowing access.
+- The system shall support the following user roles:
+  - Store Staff
+  - Store Manager
+  - Owner
+- The system shall enforce role-based access control (RBAC) for all inventory operations.
+
+#### Documentation and Training
+
+- The project shall include a user guide.
+- The project shall include technical documentation.
+- The project shall include user training before project acceptance.
+
+#### Support and Maintenance
+
+- The project shall include one year of post-deployment maintenance and technical support.
+
+---
+
+### Non-Functional Requirements
+
+#### Performance
+
+- Inventory updates shall be reflected within one (1) second or less.
+- The system shall provide real-time inventory visibility.
+
+#### Availability
+
+- The system shall maintain at least 99.9% availability during business operations.
+
+#### Security
+
+- Only authenticated users shall access the system.
+- Inventory operations shall follow role-based permissions.
+
+#### Reliability
+
+- Inventory quantities shall remain accurate after every transaction.
+- The system shall prevent invalid inventory operations.
+
+#### Maintainability
+
+- The project shall include technical documentation.
+- Core functionality shall be covered by automated tests.
+
+#### Scalability
+
+- The system shall support future integration with barcode scanning.
+- The system shall support future supplier management.
+- The system shall support future accounting system integration.
+
+---
+
+### Business Requirements
+
+- The system shall replace the client's manual inventory process.
+- The system shall provide centralized inventory management.
+- The system shall reduce inventory discrepancies.
+- The system shall reduce stock shortages.
+- The system shall improve inventory visibility.
+- The system shall support better business decision-making through dashboards and reports.
+
+---
+
+### Constraints
+
+- Data migration shall be performed by the client.
+- Barcode scanning is outside the scope of the initial implementation.
+- Supplier management is outside the scope of the initial implementation.
+- Purchase order management is outside the scope of the initial implementation.
+- Accounting system integration is outside the scope of the initial implementation.
 
 ---
 
