@@ -1,143 +1,159 @@
 ---
 name: Feature Request
 about: Propose a new feature or enhancement
-title: "[FEATURE] "
-labels: enhancement
+title: "[Feature]: "
+labels:
+  - type::feature
+assignees: []
 ---
 
 > [!IMPORTANT]
-> Issues are public. Do **not** include confidential or sensitive information.
-
----
-
-## Problem to solve
-
-> Describe the problem this feature addresses.
+> Issues are public. Do not include confidential or sensitive information.
 >
-> - Why is this needed?
-> - What pain point does it solve?
-> - What is the origin of the problem?
+> Complete every applicable section before submitting the issue.
 
----
+### Problem to solve
 
-## Solution
+> Describe why this feature is needed.
+>
+> Include:
+> - The business problem.
+> - The pain point it solves.
+> - Who is affected.
+> - The origin of the problem.
 
-> Provide a concise summary (2–4 sentences) of the proposed solution before describing the implementation details.
+### Solution
 
----
+> Provide a concise summary (2–4 sentences) of the proposed solution.
+>
+> Explain the solution from the user's perspective.
+> Save implementation details for the Proposal section.
 
-## User Stories / Requirements
+### User Stories
 
 > List all relevant user stories.
+>
+> Format:
+>
+> 1. As a **<actor>**, I want **<feature>**, so that **<benefit>**.
+>
+> Include every relevant actor impacted by this feature.
 
-1. As a **...**, I want **...**, so that **...**
-
----
-
-## Acceptance Criteria
+### Acceptance criteria
 
 > List all verifiable conditions that must be satisfied before this issue can be considered complete.
-
-- [ ]
-
----
-
-## Intended Users
-
-> Who will use this feature?
 >
-> How will it benefit them?
+> Write requirements as observable end-to-end behavior.
+>
+> Format:
+>
+> - [ ] The system shall...
 
----
+### Intended users
 
-## Permissions & Security
+> Describe who will use this feature.
+>
+> Include:
+> - Primary users.
+> - Secondary users (if applicable).
+> - How each user benefits from the feature.
+
+### Permissions and Security
 
 > Describe any permission, authentication, authorization, or security considerations.
+>
+> Examples:
+> - RBAC changes.
+> - Authentication requirements.
+> - Sensitive data.
+> - Audit logs.
+> - Security implications.
 
----
-
-## Proposal
+### Proposal
 
 > Describe the implementation in detail.
+>
+> Include, where applicable:
+>
+> - Architecture changes.
+> - Module structure.
+> - API contracts.
+> - Database/schema changes.
+> - UI/UX changes.
+> - Edge cases.
+> - Rollout strategy.
+> - Technical decisions.
 
-Include, where applicable:
+### Test plan
 
-- Architecture changes
-- Module structure
-- API contracts
-- Database/schema changes
-- UI/UX changes
-- Edge cases
-- Rollout strategy
+> Describe how this feature will be validated.
+>
+> Include:
+>
+> - Business scenarios.
+> - Edge cases.
+> - Modules affected.
+> - Existing tests to reference.
 
----
+### Steps
 
-## Test Plan
-
-> Describe how the feature will be validated.
-
-Include:
-
-- Business scenarios
-- Edge cases
-- Modules affected
-- Existing tests to reference
-
----
-
-## Implementation Checklist
-
-- [ ] Review authorization changes.
-- [ ] Add unit tests.
-- [ ] Add integration / functional / E2E tests.
-- [ ] Review or implement audit logs (tracks).
+- [ ] Review if authorization changes are needed.
+- [ ] Build unit tests.
+- [ ] Build other automated tests (functional/E2E).
+- [ ] Review/implement audit logs (tracks).
 - [ ] Update documentation.
-- [ ] Analyze data migration/backward compatibility.
-- [ ] Review whether new credentials or secrets are required.
-- [ ] Verify the code contributions checklist has been followed.
+- [ ] Analyze impact on data (e.g., ensure old records are not broken by new fields).
+- [ ] Review changes involving new credentials (e.g., ensure new secrets are added to the secret rotation process).
+- [ ] Make sure that the [code contributions checklist](https://docs.fluidattacks.com/internal/engineering/contributing) has been followed.
 
----
+### What does success look like, and how can we measure that?
 
-## Success Metrics
+> Define measurable outcomes.
+>
+> Examples:
+> - Feature adoption.
+> - Performance improvements.
+> - Error reduction.
+> - User satisfaction.
+> - Business KPIs.
 
-> How will success be measured?
-
-Examples:
-
-- Adoption
-- Performance improvements
-- Error reduction
-- User satisfaction
-
----
-
-## ETC Model
+### ETC model
 
 > **Required**
 >
-> Explain how the ETC model will be applied.
+> https://dev.fluidattacks.com/components/common/commit-msg/#eta
 >
+> Explain how the ETC model applies.
 > If it does not apply, explain why.
+>
+> Include:
+> - Entry.
+> - Task.
+> - Completion.
 
----
-
-## Out of Scope
+### Out of Scope
 
 > Explicitly list what is **not** included in this feature.
+>
+> This section helps prevent scope creep.
 
-- 
+### Further Notes
 
----
+> Include any additional context that may help implementation.
+>
+> Examples:
+> - Design decisions.
+> - Assumptions.
+> - Risks.
+> - Dependencies.
+> - Open questions.
 
-## Further Notes
+### Links / references
 
-> Additional design decisions, assumptions, implementation notes, or context.
-
----
-
-## Links / References
-
-- Documentation:
-- Design:
-- Related Issues:
-- Pull Requests:
+> Documentation:
+>
+> Design:
+>
+> Related Issues:
+>
+> Pull Requests:
