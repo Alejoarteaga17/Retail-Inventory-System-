@@ -26,7 +26,7 @@ labels: enhancement
 
 ---
 
-## User Stories
+## User Stories / Requirements
 
 > List all relevant user stories.
 
