@@ -1,7 +1,7 @@
 ---
-name: Feature Request
-about: Propose a new feature or enhancement
-title: "[Feature]: "
+name: Feature request
+about: Create a new feature request
+title: "[Feature] "
 labels:
   - type::feature
 assignees: []
@@ -9,142 +9,118 @@ assignees: []
 
 > [!IMPORTANT]
 > Issues are public. Do not include confidential or sensitive information.
->
-> Complete every applicable section before submitting the issue.
 
-### Problem to solve
+# <Feature Title>
 
-> Describe why this feature is needed.
->
-> Include:
-> - The business problem.
-> - The pain point it solves.
-> - Who is affected.
-> - The origin of the problem.
+## Problem to solve
 
-### Solution
+Describe the business problem this feature addresses.
 
-> Provide a concise summary (2–4 sentences) of the proposed solution.
->
-> Explain the solution from the user's perspective.
-> Save implementation details for the Proposal section.
+Consider answering:
+
+- Why is this feature needed?
+- What pain point does it solve?
+- What is the origin of the problem?
+- How does solving this problem benefit the business or its users?
+
+## Solution
+
+Provide a concise summary (2–4 sentences) of the proposed solution.
+
+Describe **what** will be delivered and **how** it addresses the problem.
+Leave implementation details for the **Proposal** section.
+
+## User Stories / Requirements
 
 ### User Stories
 
-> List all relevant user stories.
->
-> Format:
->
-> 1. As a **<actor>**, I want **<feature>**, so that **<benefit>**.
->
-> Include every relevant actor impacted by this feature.
+List every relevant user story.
 
-### Acceptance criteria
+Format:
 
-> List all verifiable conditions that must be satisfied before this issue can be considered complete.
->
-> Write requirements as observable end-to-end behavior.
->
-> Format:
->
-> - [ ] The system shall...
+- As a **<role>**, I want **<capability>**, so that **<benefit>**.
 
-### Intended users
+### Requirements
 
-> Describe who will use this feature.
->
-> Include:
-> - Primary users.
-> - Secondary users (if applicable).
-> - How each user benefits from the feature.
+List all functional requirements that define the feature scope.
 
-### Permissions and Security
+Format:
 
-> Describe any permission, authentication, authorization, or security considerations.
->
-> Examples:
-> - RBAC changes.
-> - Authentication requirements.
-> - Sensitive data.
-> - Audit logs.
-> - Security implications.
+- The system shall...
 
-### Proposal
+## Acceptance Criteria
 
-> Describe the implementation in detail.
->
-> Include, where applicable:
->
-> - Architecture changes.
-> - Module structure.
-> - API contracts.
-> - Database/schema changes.
-> - UI/UX changes.
-> - Edge cases.
-> - Rollout strategy.
-> - Technical decisions.
+List all verifiable conditions that must be satisfied before this issue can be considered complete.
 
-### Test plan
+Acceptance criteria should validate observable system behavior.
 
-> Describe how this feature will be validated.
->
-> Include:
->
-> - Business scenarios.
-> - Edge cases.
-> - Modules affected.
-> - Existing tests to reference.
+Format:
 
-### Steps
+- [ ] ...
 
-- [ ] Example step.
+## Intended Users
 
-### What does success look like, and how can we measure that?
+Describe who will use this feature and how it benefits them.
 
-> Define measurable outcomes.
->
-> Examples:
-> - Feature adoption.
-> - Performance improvements.
-> - Error reduction.
-> - User satisfaction.
-> - Business KPIs.
+Example:
 
-### ETC model
+- User Role: Benefit.
 
-> **Required**
->
-> Explain how the ETC model applies.
-> If it does not apply, explain why.
->
-> Include:
-> - Entry.
-> - Task.
-> - Completion.
+## Proposal
 
-### Out of Scope
+Describe the implementation in detail.
 
-> Explicitly list what is **not** included in this feature.
->
-> This section helps prevent scope creep.
+Include, where applicable:
 
-### Further Notes
+- Domain model.
+- CRUD operations.
+- Business rules.
+- Validation rules.
+- API endpoints.
+- Database/schema changes.
+- Authorization considerations.
+- Integration points with existing or future modules.
+- Any other relevant implementation details.
 
-> Include any additional context that may help implementation.
->
-> Examples:
-> - Design decisions.
-> - Assumptions.
-> - Risks.
-> - Dependencies.
-> - Open questions.
+## Implementation Checklist
 
-### Links / references
+- [ ] Review authorization changes.
+- [ ] Add unit tests.
+- [ ] Add integration / functional / E2E tests.
+- [ ] Review or implement audit logs (tracks).
+- [ ] Update documentation.
+- [ ] Analyze data migration/backward compatibility.
+- [ ] Review whether new credentials or secrets are required.
+- [ ] Verify the code contributions checklist has been followed.
 
-> Documentation:
->
-> Design:
->
-> Related Issues:
->
-> Pull Requests:
+## Success Metrics
+
+Describe how success will be measured.
+
+Examples:
+
+- Feature adoption.
+- Successful completion of the intended workflows.
+- Error reduction.
+- Performance improvements.
+- User satisfaction.
+
+## Out of Scope
+
+Explicitly list everything that is **not** included in this issue.
+
+This section should clearly define the implementation boundaries and prevent scope creep.
+
+## Further Notes
+
+Include any additional context that may help implementation.
+
+Examples:
+
+- Design decisions.
+- Assumptions.
+- Dependencies.
+- Risks.
+- Future considerations.
+
+## Links / References
