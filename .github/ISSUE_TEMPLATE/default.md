@@ -97,14 +97,7 @@ assignees: []
 
 ### Steps
 
-- [ ] Review if authorization changes are needed.
-- [ ] Build unit tests.
-- [ ] Build other automated tests (functional/E2E).
-- [ ] Review/implement audit logs (tracks).
-- [ ] Update documentation.
-- [ ] Analyze impact on data (e.g., ensure old records are not broken by new fields).
-- [ ] Review changes involving new credentials (e.g., ensure new secrets are added to the secret rotation process).
-- [ ] Make sure that the [code contributions checklist](https://docs.fluidattacks.com/internal/engineering/contributing) has been followed.
+- [ ] Example step.
 
 ### What does success look like, and how can we measure that?
 
@@ -120,8 +113,6 @@ assignees: []
 ### ETC model
 
 > **Required**
->
-> https://dev.fluidattacks.com/components/common/commit-msg/#eta
 >
 > Explain how the ETC model applies.
 > If it does not apply, explain why.
