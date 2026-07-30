@@ -367,7 +367,10 @@ The client agrees to:
 
 ## Expected Start Date and Completion Date
 
-**Pending**
+**Expected start date and completion date**
+The services of the Contractor will be required for a period of approximately 4 months, commencing on about July 23rd, 2026, and with expected completion on or about November 15th, 2026.
+Work under this agreement is expected to be performed within standard academic terms, with an allowable commitment not to exceed 20 hours aprox. per week as a group.
+Detailed milestones, deliverables, and specific phase breakdowns are defined in the Schedule section of this SOW
 
 ---
 
