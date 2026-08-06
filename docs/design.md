@@ -6,4 +6,4 @@
 
 ## Modelo de Datos
 
-<img width="1374" height="642" alt="Untitled (1)" src="https://github.com/user-attachments/assets/1743176a-9fc9-41b4-99c0-4243a2c946af" />
+<img width="1251" height="654" alt="Untitled (2)" src="https://github.com/user-attachments/assets/9d05c7d7-298a-41e5-836b-449de62e0221" />
