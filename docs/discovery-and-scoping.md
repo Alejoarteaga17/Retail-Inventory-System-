@@ -216,3 +216,55 @@ Complete end-to-end testing, user acceptance testing, documentation, production 
 
 * All MVP features must be complete
 * System must be ready for end-to-end testing
+
+## 4. Risks, Assumptions, and Dependencies
+
+### 1. Risks
+
+| Risk                                                                         | Impact                                                                                       | Mitigation                                                                                            |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Staff may find the inventory system difficult to use.                        | Low adoption and continued use of manual records, spreadsheets, or WhatsApp.                 | Keep the interface simple, test the main workflows with staff, and provide a short onboarding guide.  |
+| Inventory business rules may be unclear.                                     | Incorrect stock calculations, inconsistent inventory records, or unexpected system behavior. | Confirm inventory rules, stock thresholds, adjustment rules, and approval workflows during discovery. |
+| Scope may grow beyond the MVP.                                               | Project delays and unfinished core functionality.                                            | Clearly separate features into IN, OUT, LATER, and UNKNOWN scope.                                     |
+| Staff may enter incorrect stock movements.                                   | Inventory quantities may become inaccurate.                                                  | Use validation rules, clear movement types, required reasons, and an audit history for all changes.   |
+| Negative stock may be handled incorrectly.                                   | Inventory records may become inconsistent or misleading.                                     | Prevent negative stock by default and require manager approval for exceptional cases.                 |
+| Store and storage room inventory requirements may change during development. | Changes to the data model and inventory logic may increase development effort.               | Confirm whether inventory locations need to be tracked separately before finalizing the data model.   |
+| Low-stock thresholds may not be clearly defined.                             | Incorrect or ineffective low-stock alerts.                                                   | Define how thresholds are determined and whether they are set per product during discovery.           |
+| Multiple users may modify the same inventory item at the same time.          | Race conditions or incorrect inventory quantities.                                           | Implement concurrency controls and transactional stock updates.                                       |
+| Inventory movement history may be incomplete or inaccurate.                  | Management may not be able to understand why stock changed.                                  | Record every stock movement with the product, quantity, type, date, user, and reason.                 |
+
+---
+
+### 2. Assumptions
+
+| Assumption                                                                            | Why It Matters                                                                             |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Staff will manually record stock-in, stock-out, and adjustment transactions.          | Avoids the need for barcode scanners or other automated inventory integrations in the MVP. |
+| The MVP does not require POS functionality.                                           | Keeps the project focused on inventory management rather than sales processing.            |
+| The MVP does not require accounting functionality.                                    | Avoids introducing financial and accounting workflows outside the project scope.           |
+| The MVP does not require e-commerce integration or payment processing.                | Keeps the system aligned with the current inventory management requirements.               |
+| Staff, Managers, and Owners are the main system users.                                | Defines the initial authentication and authorization model.                                |
+| All inventory movements should be recorded in the system.                             | Provides an audit trail and allows management to understand changes in stock levels.       |
+| Negative stock should not be allowed without manager approval.                        | Protects inventory accuracy while allowing controlled exceptions.                          |
+| A dashboard and movement history are sufficient for the initial reporting needs.      | Avoids building a more complex reporting system for the MVP.                               |
+| Low-stock alerts will be based on a defined stock threshold.                          | Provides a clear rule for identifying products that require attention.                     |
+| Product and inventory information will be entered and maintained by authorized users. | Reduces the need for external product catalog integrations in the MVP.                     |
+
+---
+
+### 3. Dependencies and Pending Decisions
+
+| Dependency or Decision                                                                                                                | Owner                 |
+| ------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Confirm whether the MVP should support one inventory location or separate inventory for the store and storage room.                   | Client / Project Team |
+| Confirm the exact capacity and behavior of each inventory location, if multiple locations are required.                               | Client / Project Team |
+| Confirm how low-stock thresholds should be defined and maintained.                                                                    | Client / Manager      |
+| Confirm the exact permissions for Staff, Manager, and Owner roles.                                                                    | Client / Project Team |
+| Confirm the workflow for requesting and approving negative stock adjustments.                                                         | Client / Manager      |
+| Confirm the required product fields for the MVP.                                                                                      | Client / Project Team |
+| Confirm the required fields for stock movement records.                                                                               | Client / Project Team |
+| Confirm whether inventory adjustments require a reason in all cases.                                                                  | Client / Manager      |
+| Confirm whether Managers and Owners should have identical administrative permissions.                                                 | Client / Project Team |
+| Confirm the dashboard metrics and inventory reports required for the MVP.                                                             | Client / Project Team |
+| Confirm whether identifying popular products based on stock movements is required in the MVP or should be considered a later feature. | Client / Project Team |
+| Confirm the expected number of users and whether multiple users may perform inventory operations concurrently.                        | Client / Project Team |
