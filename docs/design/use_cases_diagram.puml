@@ -1,0 +1,92 @@
+@startuml use_cases_diagram
+' Use case diagram — Retail Inventory Management System (MVP)
+' Source of truth for docs/design/use_cases_diagram.svg
+' Regenerate with:
+'   java -jar plantuml.jar -tsvg docs/design/use_cases_diagram.puml
+
+left to right direction
+
+skinparam linetype ortho
+skinparam nodesep 45
+skinparam ranksep 85
+skinparam shadowing false
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 13
+skinparam ArrowColor #444444
+skinparam actor {
+  BorderColor #333333
+  BackgroundColor #FFFFFF
+}
+skinparam usecase {
+  BorderColor #555555
+  BackgroundColor #FFFFFF
+  FontColor #222222
+}
+skinparam rectangle {
+  BorderColor #888888
+  BackgroundColor #FCFCFC
+  FontStyle bold
+}
+
+' ---- primary actors: stick figures, outside the system boundary ----
+actor "Store Staff" as staff
+actor "Store Manager" as manager
+actor "Owner" as owner
+
+rectangle "Retail Inventory Management System" {
+  usecase "Log in" as UC_LOGIN
+
+  usecase "Manage\ninventory items" as UC_ITEMS
+  usecase "View current\ninventory" as UC_VIEWINV
+
+  usecase "Record\nstock-in" as UC_IN
+  usecase "Record\nstock-out" as UC_OUT
+  usecase "Adjust\ninventory" as UC_ADJUST
+  usecase "Approve\nnegative stock" as UC_APPROVE
+  usecase "View movement\nhistory" as UC_HISTORY
+
+  usecase "View low-stock\nalerts" as UC_ALERTS
+  usecase "View inventory\ndashboard" as UC_DASH
+  usecase "Generate\nlow-stock report" as UC_REPORT
+
+  usecase "Manage users\nand roles" as UC_USERS
+}
+
+' ---- actor generalization: a Manager can do everything Staff can ----
+manager --|> staff
+owner --|> manager
+
+' ---- associations ----
+staff -- UC_LOGIN
+staff -- UC_ITEMS
+staff -- UC_VIEWINV
+staff -- UC_IN
+staff -- UC_OUT
+staff -- UC_ADJUST
+staff -- UC_HISTORY
+staff -- UC_ALERTS
+
+manager -- UC_APPROVE
+manager -- UC_DASH
+manager -- UC_REPORT
+
+owner -- UC_USERS
+
+' ---- include: the dashboard always highlights low-stock items ----
+UC_DASH ..> UC_ALERTS : <<include>>
+
+' ---- extend: only when the adjustment would push stock below zero ----
+UC_APPROVE ..> UC_ADJUST : <<extend>>
+
+legend right
+  |= Notation |= Meaning |
+  | Stick figure | Actor — outside the system boundary |
+  | Oval | Use case — a goal an actor pursues |
+  | Plain line | Association |
+  | Hollow triangle | Generalization — the child inherits the parent's use cases |
+  | <<include>> | Mandatory: the base use case always performs it |
+  | <<extend>> | Conditional: the base use case works without it |
+endlegend
+
+@enduml
