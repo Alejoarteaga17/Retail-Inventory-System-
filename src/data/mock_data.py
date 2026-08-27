@@ -20,3 +20,30 @@ mock_reservations_data = [
         "reservation_contact": "john.doe@example.com",
     },
 ]
+
+mock_inventory_data = [
+    {
+        "id": 1,
+        "name": "Oak Dining Chair",
+        "category": "Furniture",
+        "quantity": 24,
+        "reorder_threshold": 10,
+        "price": 89.99,
+    },
+    {
+        "id": 2,
+        "name": "Ceramic Vase",
+        "category": "Decor",
+        "quantity": 6,
+        "reorder_threshold": 8,
+        "price": 24.50,
+    },
+    {
+        "id": 3,
+        "name": "Cotton Bed Sheet Set",
+        "category": "Textiles",
+        "quantity": 42,
+        "reorder_threshold": 15,
+        "price": 59.00,
+    },
+]

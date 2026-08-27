@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from data.mock_data import mock_data
 from services.reservation_service import get_reservations
+from services.inventory_service import get_inventory
 
 app = FastAPI(
     title="FastAPI Starter",
@@ -17,3 +18,8 @@ def read_root():
 @app.get("/reservations")
 def read_reservations():
     return get_reservations()
+
+
+@app.get("/inventory")
+def read_inventory():
+    return get_inventory()

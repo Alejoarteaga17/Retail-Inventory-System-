@@ -1,0 +1,1 @@
+Haz el endpoint de inventario de productos
