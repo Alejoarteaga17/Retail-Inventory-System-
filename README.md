@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ## Run
 
 ```bash
-uvicorn src/main:app --reload
+uvicorn main:app --app-dir src --reload
 ```
 
 ## Endpoints
