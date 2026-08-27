@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from data.mock_data import mock_data
+from services.reservation_service import get_reservations
 
 app = FastAPI(
     title="FastAPI Starter",
@@ -9,4 +11,9 @@ app = FastAPI(
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello World"}
+    return mock_data
+
+
+@app.get("/reservations")
+def read_reservations():
+    return get_reservations()
