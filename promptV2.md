@@ -1,0 +1,1 @@
+Nosotros queremos hacer un "reail inventory-system" nuestro objetivo actual es crear el endoint para el sistema con FastAPI con una data_mock basada en la informacion de docs y esto va a ir en el /src folder y ya tu te enfocas con las mejores prácticas y principios de software como sepraarlos correctametne

@@ -1,0 +1,680 @@
+{
+  "info": {
+    "name": "Retail Inventory System - API v1",
+    "description": "Inventory API for Cornerline Home Goods.\n\nSet the `base_url` variable to your running server (default http://127.0.0.1:8000).\n\nThe caller is simulated with the `X-User-Name` and `X-User-Role` headers. Valid roles: STORE_STAFF, STORE_MANAGER, OWNER. Manual adjustments require STORE_MANAGER or OWNER.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Meta",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "health"
+              ]
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Item catalog",
+      "item": [
+        {
+          "name": "List items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "List items - Decor only",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items?category=Decor",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "Decor"
+                }
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "List items - low stock only",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items?low_stock=true",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items"
+              ],
+              "query": [
+                {
+                  "key": "low_stock",
+                  "value": "true"
+                }
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "List items - including inactive",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items?include_inactive=true",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items"
+              ],
+              "query": [
+                {
+                  "key": "include_inactive",
+                  "value": "true"
+                }
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Search items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items?q=vase",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "vase"
+                }
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Get item 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "1"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Create item",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items"
+              ]
+            },
+            "description": "Returns 409 if the SKU already exists.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sku\": \"KIT-KNF-040\",\n  \"name\": \"Chef Knife\",\n  \"category\": \"Kitchen\",\n  \"quantity\": 5,\n  \"reorder_threshold\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update item 1",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "1"
+              ]
+            },
+            "description": "quantity is not patchable: it only changes through a stock movement.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reorder_threshold\": 15\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Deactivate item 1",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "1"
+              ]
+            },
+            "description": "Soft delete. History is preserved."
+          }
+        },
+        {
+          "name": "Reactivate item 1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/1/reactivate",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "1",
+                "reactivate"
+              ]
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stock movements",
+      "item": [
+        {
+          "name": "Stock in - 10 units on item 3",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Name",
+                "value": "ana.staff"
+              },
+              {
+                "key": "X-User-Role",
+                "value": "STORE_STAFF"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/3/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "3",
+                "movements"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"STOCK_IN\",\n  \"quantity\": 10,\n  \"note\": \"Supplier delivery\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Stock out - 4 units on item 3",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Name",
+                "value": "ana.staff"
+              },
+              {
+                "key": "X-User-Role",
+                "value": "STORE_STAFF"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/3/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "3",
+                "movements"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"STOCK_OUT\",\n  \"quantity\": 4,\n  \"note\": \"Sold in store\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Stock out - too many (409)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Name",
+                "value": "ana.staff"
+              },
+              {
+                "key": "X-User-Role",
+                "value": "STORE_STAFF"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/3/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "3",
+                "movements"
+              ]
+            },
+            "description": "Stock can never go negative.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"STOCK_OUT\",\n  \"quantity\": 9999\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Adjustment as Staff (403)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Name",
+                "value": "ana.staff"
+              },
+              {
+                "key": "X-User-Role",
+                "value": "STORE_STAFF"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/3/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "3",
+                "movements"
+              ]
+            },
+            "description": "Manual adjustments are restricted to Manager and Owner.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"ADJUSTMENT\",\n  \"quantity\": 12\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Adjustment as Manager (201)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Name",
+                "value": "luis.manager"
+              },
+              {
+                "key": "X-User-Role",
+                "value": "STORE_MANAGER"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/3/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "3",
+                "movements"
+              ]
+            },
+            "description": "ADJUSTMENT sets the counted quantity, it does not add to it.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"ADJUSTMENT\",\n  \"quantity\": 12,\n  \"note\": \"Physical count\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Movement on unknown item (404)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Name",
+                "value": "ana.staff"
+              },
+              {
+                "key": "X-User-Role",
+                "value": "STORE_STAFF"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/9999/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "9999",
+                "movements"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"STOCK_IN\",\n  \"quantity\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Movement on deactivated item (409)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Name",
+                "value": "ana.staff"
+              },
+              {
+                "key": "X-User-Role",
+                "value": "STORE_STAFF"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/8/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "8",
+                "movements"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"STOCK_IN\",\n  \"quantity\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "History for item 3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/items/3/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "items",
+                "3",
+                "movements"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Full history",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/movements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movements"
+              ]
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Insights",
+      "item": [
+        {
+          "name": "Low-stock alerts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/insights/low-stock",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "insights",
+                "low-stock"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/insights/dashboard",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "insights",
+                "dashboard"
+              ]
+            },
+            "description": ""
+          }
+        }
+      ]
+    }
+  ]
+}
