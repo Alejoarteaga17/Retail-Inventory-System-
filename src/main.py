@@ -1,19 +1,19 @@
 from fastapi import FastAPI
-from data.mock_data import mock_data
-from services.reservation_service import get_reservations
+
+from routers.inventory import router as inventory_router
 
 app = FastAPI(
-    title="FastAPI Starter",
-    description="Baseline FastAPI project.",
+    title="Retail Inventory Management System",
+    description=(
+        "Inventory management API for Cornerline Home Goods. "
+        "Supports catalog management with real-time quantity tracking."
+    ),
     version="0.1.0",
 )
 
-
-@app.get("/")
-def read_root():
-    return mock_data
+app.include_router(inventory_router)
 
 
-@app.get("/reservations")
-def read_reservations():
-    return get_reservations()
+@app.get("/", tags=["Health"])
+def read_root() -> dict[str, str]:
+    return {"message": "Retail Inventory Management System API"}
